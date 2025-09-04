@@ -1,0 +1,1 @@
+# in this file i put command of aws cli to managne aws services 
