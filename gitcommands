@@ -57,3 +57,55 @@ git fetch
 
 # Delete a branch
 git branch -d <branch_name>
+
+# View current branch
+git branch --show-current
+# View all branches
+git branch -a
+# Rename current branch
+git branch -m <new_branch_name>
+# Rename another branch
+git branch -m <old_branch_name> <new_branch_name>
+# Delete a remote branch
+git push origin --delete <branch_name>
+# Force push changes to remote repository
+git push origin <branch_name> --force
+# View commit history in a graph format
+git log --oneline --graph --all --decorate
+# Undo last commit but keep changes in working directory
+git reset --soft HEAD~1
+# Undo last commit and discard changes
+git reset --hard HEAD~1
+# View changes in a specific file 
+git checkout -- <file_name>
+# View changes in a specific commit
+git checkout <commit_hash> -- <file_name>  
+# Create a tag
+git tag <tag_name>
+# Push tags to remote repository
+git push origin <tag_name>
+# View all tags
+git tag
+# View changes between commits
+git diff <commit_hash1> <commit_hash2>
+# Squash commits
+git rebase -i HEAD~<number_of_commits>
+# Configure a text editor for Git
+git config --global core.editor "code --wait"
+# Configure line ending settings
+git config --global core.autocrlf true  # For Windows
+git config --global core.autocrlf input # For macOS/Linux
+# View Git configuration
+git config --list
+# Show detailed information about a specific commit
+git show <commit_hash>
+# show changes between working directory and last commit
+git diff HEAD
+# show changes between staging area and last commit
+git diff --cached
+# show changes between working directory and staging area
+git diff HEAD -- <file_name>
+# Amend the last commit
+git commit --amend -m "New commit message"
+# show changes with tags and branch names
+git log --oneline --graph --all --decorate
