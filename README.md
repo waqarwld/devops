@@ -80,6 +80,7 @@ CI/CD
 Kubernetes
 * https://youtube.com/clip/UgkxGHiVqCiH5idb0J-tTlwvrKGS63ywQ5fQ?si=tn8GSlxT04UvbDmG
  * Certification - CKA,CKAD,CKS
+ * kubectl set image deployment/nginx-deployment -n nginx  nginx=nginx:latest
 
 Artificial Intelligent
 * Book Artifical intellingence A Guide for Thingking Humans by Melanie Mitchell
