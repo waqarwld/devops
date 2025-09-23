@@ -63,7 +63,9 @@ Cloud
 
 Infrastructure as Code IaC
   * Bisep for Microsoft
-  * Terraform 
+  * Terraform
+
+Ansible 
   
 Cloud elements
  * Databases
