@@ -1,0 +1,23 @@
+Lixus For DevOps Command
+
+=========== System Level Commands ==========
+uname   # name of the operating system
+uptime  # how long system is running 
+who     
+whoami
+which   ----- which bash  ----which cp  -- show the location of the file 
+id      -- it show the user id or check other users id or what group of this user is member of 
+sudo
+passwd   -- show the list of user from . like /ect/passwd
+shutdown   --- sudo shutdown --- 
+reboot
+apt
+yum
+dnf
+pacman
+portage
+========================== User & Group Management Commands ========================
+sudo
+useradd
+whoami
+su
