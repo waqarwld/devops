@@ -13,10 +13,10 @@ linux arch + certificaion in linux
 
 Vim text editor Commands
 -
-   i, I
+----------  i, I
 -            -change to insert mode
 h, j, k, l
-            -move left, down, up, right
+-            -move left, down, up, right
 w, b, e, ge
             -move word at a time
 [n][action/movement]
