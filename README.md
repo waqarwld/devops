@@ -12,9 +12,9 @@ linux arch + certificaion in linux
 - Bash scripting -- every thing of pipeline can be replaced by BashScripting
 
 Vim text editor Commands
-
+-
    i, I
-            -change to insert mode
+-            -change to insert mode
 h, j, k, l
             -move left, down, up, right
 w, b, e, ge
