@@ -21,7 +21,7 @@ w, b, e, ge
             -move word at a time
 [n][action/movement]
             do n times, e.g. 3w
-x, X
+  -  x, X
             remove a character
 a, A
             append
