@@ -1,136 +1,136 @@
 I am going to make Documentation for all pricatals and home labs as much I can + Diagrams
 
-linux arch + certificaion in linux 
-- Boot process
-- File sytem
-- Permissions
-- Systemd
-- Package managters
-- Debugging skills
-- Finding /reading logs
-- Networking Fundamentals
-- Bash scripting -- every thing of pipeline can be replaced by BashScripting
+linux arch + certificaion in linux
 
+Boot process
+File sytem
+Permissions
+Systemd
+Package managters
+Debugging skills
+Finding /reading logs
+Networking Fundamentals
+Bash scripting – every thing of pipeline can be replaced by BashScripting
 Vim text editor Commands
--
-----------  i, I
--            -change to insert mode
+---------- i, I
+-change to insert mode
 h, j, k, l
--            -move left, down, up, right
+* move left, down, up, right
 w, b, e, ge
-            -move word at a time
+*move word at a time
 [n][action/movement]
-            do n times, e.g. 3w
-  -  x, X
-            remove a character
+do n times, e.g. 3w
+
+x, X
+remove a character
 a, A
-            append
+append
 f[char]
-            move to next given char in line
+move to next given char in line
 F[char]
-            move to previous char in line
+move to previous char in line
 ; and ,
-            repeat last f or F
+repeat last f or F
 /yourtext and then: n, N
-            Search text
+Search text
 d[movement]
-            delete by giving movement
+delete by giving movement
 r[char]
-            replaces character below cursor
+replaces character below cursor
 0, $
-            move to start/end of line
+move to start/end of line
 o, O
-            add new line
+add new line
 %
-            Goto corresponding parentheses
+Goto corresponding parentheses
 ci[movement]
-            change inside of given movement
+change inside of given movement
 D
-            delete to end of line
+delete to end of line
 S
-            clear current line; to insert mode
+clear current line; to insert mode
 gg / G
-            move to start / end of buffer
+move to start / end of buffer
 yy
-            copy current line
+copy current line
 p
-            Paste copied text after cursor
-  
--- Certification -- RHCSA  or LIPIC-1
+Paste copied text after cursor
+– Certification – RHCSA or LIPIC-1
 
 Containers
-- Docker
-- DockerFile
-- Container sercuriy
-- Running multiple containers
-- Docker Networking
-- Dev Containers
 
+Docker
+DockerFile
+Container sercuriy
+Running multiple containers
+Docker Networking
+Dev Containers
 Programing Language
-- Mainly for connecting tools & API'S
-- Learn the Fundamentals
-    * Varibales
-    * Functions
-    * OOP
-    * Labraries
 
+Mainly for connecting tools & API’S
+Learn the Fundamentals
+Varibales
+Functions
+OOP
+Labraries
 Git
 
-Learn to love Yaml 
+Learn to love Yaml
 Yaml is used for:
-    * ansible
-    * Kubernetes
-    * github Actions
-    * Azure DevOps pipelines
+* ansible
+* Kubernetes
+* github Actions
+* Azure DevOps pipelines
 
 Python and Go Language
- * Most poplular language in AI and MLOps 
 
- https://www.exersism.org/tracks/python/consepts
+Most poplular language in AI and MLOps
+https://www.exersism.org/tracks/python/consepts
 http://www.freecodecamp.org
 100 days of python on udemy
-* use code to automate small thinsg for yourself
-* www.freepublicapis.com
+
+use code to automate small thinsg for yourself
+www.freepublicapis.com
 book - learn to automate boaring stuff
+Cloud
 
-Cloud 
- - AWS-associate 100 jobs on it
-    * Adrian Contrill 
-    * Kodekloud
-    * Aws Skill Builders
-    *
- - AZ - 104 Azure administrator 50 jobs on it
-   * Micsofoft Learn
-   * John Savill youtube 
+AWS-associate 100 jobs on it
 
- - GCP 
-   * Has smaller market space
-   * https://cloud.google.com/learn/training
+Adrian Contrill
+Kodekloud
+Aws Skill Builders
+AZ - 104 Azure administrator 50 jobs on it
 
+Micsofoft Learn
+John Savill youtube
+GCP
+
+Has smaller market space
+https://cloud.google.com/learn/training
 Infrastructure as Code IaC
-  * Bisep for Microsoft
-  * Terraform
 
-Ansible 
-  
+Bisep for Microsoft
+Terraform
+Ansible
+
 Cloud elements
- * Databases
- * Storage and Backup
- * Networking / azur 104 course has networing deep tutorial
- * IAM / Entra ID
 
+Databases
+Storage and Backup
+Networking / azur 104 course has networing deep tutorial
+IAM / Entra ID
 CI/CD
-* Jenkins
-* ArgoCD
-* Githup Action
-* GitLab
 
+Jenkins
+ArgoCD
+Githup Action
+GitLab
 Kubernetes
-* https://youtube.com/clip/UgkxGHiVqCiH5idb0J-tTlwvrKGS63ywQ5fQ?si=tn8GSlxT04UvbDmG
- * Certification - CKA,CKAD,CKS
- * kubectl set image deployment/nginx-deployment -n nginx  nginx=nginx:latest
-1. Cluster Creation / Startup Errors
 
+https://youtube.com/clip/UgkxGHiVqCiH5idb0J-tTlwvrKGS63ywQ5fQ?si=tn8GSlxT04UvbDmG
+Certification - CKA,CKAD,CKS
+kubectl set image deployment/nginx-deployment -n nginx nginx=nginx:latest
+Cluster Creation / Startup Errors
 Errors:
 
 Failed to pull image
@@ -189,7 +189,7 @@ Taints prevent scheduling
 
 Troubleshooting:
 
-kubectl describe pod <pod-name> → look at "Events" section.
+kubectl describe pod <pod-name> → look at “Events” section.
 
 Check resource requests vs. node capacity.
 
@@ -217,16 +217,13 @@ Check logs:
 
 kubectl logs <pod> -n <namespace>
 
-
 If multiple containers:
 
 kubectl logs <pod> -c <container-name>
 
-
 Check events:
 
 kubectl describe pod <pod>
-
 
 Common causes:
 
@@ -254,16 +251,13 @@ Verify CNI plugin:
 
 kubectl get pods -n kube-system
 
-
 Check CoreDNS logs:
 
 kubectl logs -n kube-system -l k8s-app=kube-dns
 
-
 Test DNS resolution inside pod:
 
-kubectl exec -it <pod> -- nslookup kubernetes.default
-
+kubectl exec -it <pod> – nslookup kubernetes.default
 
 Confirm iptables rules aren’t blocked.
 
@@ -285,13 +279,11 @@ Check PVC & PV status:
 
 kubectl get pvc,pv
 
-
 Describe PVC for error messages.
 
 Ensure storage class exists:
 
 kubectl get storageclass
-
 
 Check CSI plugin logs (kubectl logs -n kube-system <csi-pod>).
 
@@ -299,7 +291,7 @@ Check CSI plugin logs (kubectl logs -n kube-system <csi-pod>).
 
 Errors:
 
-kubectl get ... hangs
+kubectl get … hangs
 
 etcdserver: request timed out
 
@@ -311,11 +303,9 @@ Check API server logs:
 
 journalctl -u kube-apiserver
 
-
 Verify etcd cluster health:
 
 ETCDCTL_API=3 etcdctl endpoint health --endpoints <list>
-
 
 Look for certificate expiry issues.
 
@@ -325,7 +315,7 @@ Ensure control plane nodes can reach each other.
 
 Errors:
 
-User "xyz" cannot list resource ...
+User “xyz” cannot list resource …
 
 Forbidden: service account not allowed
 
@@ -357,7 +347,6 @@ Check HPA:
 
 kubectl get hpa
 
-
 Inspect cluster autoscaler logs.
 
 Verify node pool scaling policies in cloud provider.
@@ -379,4 +368,5 @@ journalctl -u kubelet
 kubectl get componentstatuses (deprecated, but useful)
 
 Artificial Intelligent
-* Book Artifical intellingence A Guide for Thingking Humans by Melanie Mitchell
+
+Book Artifical intellingence A Guide for Thingking Humans by Melanie Mitchell
