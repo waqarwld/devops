@@ -528,6 +528,206 @@ tcp    ESTAB   0       0       192.168.1.10:22     192.168.1.20:50512  users:(("
 Would you like me to add a **“Troubleshooting Use Case”** right after this — for example,  
 > “Find which process is using port 8080” — using `ss` step-by-step?
 ```
+Perfect! Here’s a **complete Linux Text Processing Cheat Sheet** combining `awk`, `sed`, `cut`, `grep`, and `sort` with clear examples — ready for your README.md:
+
+---
+
+````markdown
+# **Linux Text Processing Cheat Sheet**
+
+This cheat sheet covers essential commands for processing text files, logs, and command output in Linux.
+
+---
+
+## **1. AWK**
+`awk` is a **pattern scanning and processing language**.  
+It works line by line and splits each line into **fields**.
+
+### **Syntax**
+```bash
+awk 'pattern { action }' filename
+````
+
+### **Examples**
+
+```bash
+# Print specific columns
+awk '{print $1, $3}' file.txt
+
+# Print lines containing "error"
+awk '/error/ {print $0}' logfile.log
+
+# Sum values in column 2
+awk '{sum += $2} END {print sum}' file.txt
+
+# Average of column 3
+awk '{sum+=$3; count++} END {print sum/count}' file.txt
+
+# Print line numbers with content
+awk '{print NR, $0}' file.txt
+
+# Using custom field separator
+awk -F',' '{print $1, $2}' data.csv
+```
+
+---
+
+## **2. SED**
+
+`sed` is a **stream editor** used for **text substitution, deletion, and insertion**.
+
+### **Syntax**
+
+```bash
+sed 'command' filename
+```
+
+### **Examples**
+
+```bash
+# Replace 'apple' with 'orange'
+sed 's/apple/orange/' file.txt
+
+# Replace globally in each line
+sed 's/apple/orange/g' file.txt
+
+# Delete lines containing 'error'
+sed '/error/d' logfile.log
+
+# Print lines 2 to 5
+sed -n '2,5p' file.txt
+```
+
+---
+
+## **3. CUT**
+
+`cut` extracts **specific fields or columns** from a file or stream.
+
+### **Syntax**
+
+```bash
+cut -d 'delimiter' -f field_number filename
+```
+
+### **Examples**
+
+```bash
+# Extract first column (default delimiter is tab)
+cut -f1 file.txt
+
+# Extract first and third columns using comma as delimiter
+cut -d',' -f1,3 data.csv
+
+# Extract a range of characters
+cut -c1-10 file.txt
+```
+
+---
+
+## **4. GREP**
+
+`grep` searches for **patterns in text** and prints matching lines.
+
+### **Syntax**
+
+```bash
+grep [options] pattern filename
+```
+
+### **Examples**
+
+```bash
+# Find lines containing 'error'
+grep 'error' logfile.log
+
+# Case-insensitive search
+grep -i 'error' logfile.log
+
+# Show line numbers
+grep -n 'error' logfile.log
+
+# Search recursively in directory
+grep -r 'TODO' /path/to/code
+```
+
+---
+
+## **5. SORT**
+
+`sort` arranges lines of text **alphabetically or numerically**.
+
+### **Syntax**
+
+```bash
+sort [options] filename
+```
+
+### **Examples**
+
+```bash
+# Sort alphabetically
+sort file.txt
+
+# Sort numerically by first column
+sort -n file.txt
+
+# Reverse sort
+sort -r file.txt
+
+# Sort by column 2
+sort -k2 file.txt
+
+# Combine with uniq to remove duplicates
+sort file.txt | uniq
+```
+
+---
+
+## **6. PIPELINES**
+
+Combine commands to process text efficiently.
+
+```bash
+# List top 5 memory-consuming processes
+ps aux | sort -rk4 | head -5
+
+# Count number of errors in a log
+grep 'error' logfile.log | wc -l
+
+# Extract IP addresses from logs
+awk '{print $1}' access.log | sort | uniq -c | sort -nr
+```
+
+---
+
+## **✅ Quick Tips**
+
+| Command       | Use                                      |
+| ------------- | ---------------------------------------- |
+| `awk`         | Column-based processing, calculations    |
+| `sed`         | Find & replace, line editing             |
+| `cut`         | Extract fields or character ranges       |
+| `grep`        | Pattern search                           |
+| `sort`        | Arrange lines alphabetically/numerically |
+| `uniq`        | Remove duplicates or count unique lines  |
+| `wc`          | Word, line, character counting           |
+| `head`/`tail` | Show first/last N lines                  |
+
+---
+
+**💡 Pro Tip:**
+Use `man <command>` to explore advanced features.
+Combining these tools allows powerful **log analysis, data extraction, and reporting** in Linux.
+
+```
+
+---
+
+If you want, I can **create an additional “Real-World Examples” section** showing a **full workflow using grep, awk, sed, sort, cut** together — e.g., analyzing a web server log. This makes the cheat sheet even more practical.  
+
+Do you want me to do that next?
+```
 
 
 
