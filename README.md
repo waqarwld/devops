@@ -55,6 +55,10 @@ yy
 copy current line
 p
 Paste copied text after cursor
+
+scp command 
+            rsync -avz -e "ssh -i /path/to/private_key.pem" /local/dir/ user@remote_host:/remote/dir/
+
 – Certification – RHCSA or LIPIC-1
 
 Containers
