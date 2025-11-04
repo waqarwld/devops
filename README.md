@@ -92,7 +92,9 @@ unison /local ssh://user@remote//remote
 | `/local/dir/`                   | Source directory                                       |
 | `user@remote_host:/remote/dir/` | Destination path on remote system                      |
 
-Perfect 👍 Here’s an improved and well-structured **README.md** draft for your “Linux Networking Commands” section — first a list, then detailed explanations for each:
+Excellent catch 👏 — yes, the `mtr` command is an **important modern tool** that combines features of both `ping` and `traceroute`.
+
+Here’s your **updated README.md** version including `mtr` — cleanly formatted and placed in the right section:
 
 ````markdown
 # **Networking in Linux**
@@ -112,6 +114,7 @@ Below is a list of commonly used networking commands.
 | `ss` | Display detailed socket statistics (replacement for netstat) |
 | `ping` | Test network connectivity to another host |
 | `traceroute` | Show the route packets take to a destination |
+| `mtr` | Combine `ping` and `traceroute` for real-time path monitoring |
 | `nslookup` | Query DNS records for a domain |
 | `dig` | Advanced DNS lookup utility |
 | `route` | View or manipulate the IP routing table |
@@ -197,7 +200,25 @@ traceroute -I 8.8.8.8
 
 ---
 
-### **7. nslookup**
+### **7. mtr**
+
+Combines `ping` and `traceroute` functionality for **real-time route diagnostics**.
+It continuously sends packets to each hop, showing latency and packet loss dynamically.
+
+```bash
+mtr google.com
+mtr -rw example.com   # Report mode (summary view)
+```
+
+**Key Features:**
+
+* Real-time monitoring of network paths
+* Detects where packet loss or high latency occurs
+* Useful for continuous network troubleshooting
+
+---
+
+### **8. nslookup**
 
 Queries DNS records for a domain.
 
@@ -207,7 +228,7 @@ nslookup example.com
 
 ---
 
-### **8. dig**
+### **9. dig**
 
 Advanced DNS query tool with detailed output.
 
@@ -218,7 +239,7 @@ dig +short example.com
 
 ---
 
-### **9. route**
+### **10. route**
 
 Displays or modifies the system’s routing table.
 
@@ -229,7 +250,7 @@ sudo route add default gw 192.168.1.1
 
 ---
 
-### **10. hostname**
+### **11. hostname**
 
 Displays or sets the system hostname.
 
@@ -240,7 +261,7 @@ sudo hostnamectl set-hostname myserver
 
 ---
 
-### **11. curl**
+### **12. curl**
 
 Transfers data to/from a server using URLs (HTTP, FTP, etc).
 
@@ -251,7 +272,7 @@ curl -I https://example.com   # Fetch only headers
 
 ---
 
-### **12. wget**
+### **13. wget**
 
 Downloads files from the web via command line.
 
@@ -261,7 +282,7 @@ wget https://example.com/file.zip
 
 ---
 
-### **13. ethtool**
+### **14. ethtool**
 
 Displays Ethernet interface settings and statistics.
 
@@ -271,7 +292,7 @@ ethtool eth0
 
 ---
 
-### **14. tcpdump**
+### **15. tcpdump**
 
 Captures and analyzes network traffic.
 
@@ -282,7 +303,7 @@ sudo tcpdump -i eth0 port 80
 
 ---
 
-### **15. nmap**
+### **16. nmap**
 
 Scans networks and identifies hosts, open ports, and services.
 
@@ -299,7 +320,7 @@ nmap -sS -p 22,80 192.168.1.10
 | --------------------- | --------------------------- |
 | Interface Management  | `ifconfig`, `ip`, `ethtool` |
 | Connection Monitoring | `netstat`, `ss`, `tcpdump`  |
-| Network Testing       | `ping`, `traceroute`        |
+| Network Testing       | `ping`, `traceroute`, `mtr` |
 | DNS Tools             | `nslookup`, `dig`           |
 | Routing               | `route`                     |
 | Web Utilities         | `curl`, `wget`              |
@@ -315,8 +336,11 @@ nmap -sS -p 22,80 192.168.1.10
 
 ```
 
-Would you like me to add **practical scenarios** next (like “Check why a server is unreachable” or “Find which process is using a port”)? That would make this README even more hands-on.
+Would you like me to add a **“Troubleshooting Examples”** section next — e.g.,  
+> 🔍 “Server not reachable” → step-by-step which commands to run (`ping`, `mtr`, `ss`, etc.)?  
+It’ll make this README even more practical.
 ```
+
 
 
  
