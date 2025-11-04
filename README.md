@@ -67,7 +67,18 @@ Tracks changes on both sides
 Handles conflicts interactively
 Example:
 unison /local ssh://user@remote//remote
+
 ✅ Truly synchronizes both directions safely
+
+| Part                            | Meaning                                                |
+| ------------------------------- | ------------------------------------------------------ |
+| `-a`                            | Archive mode (preserves permissions, timestamps, etc.) |
+| `-v`                            | Verbose                                                |
+| `-z`                            | Compress during transfer                               |
+| `-e "ssh -i key.pem"`           | Use SSH with a specific private key                    |
+| `/local/dir/`                   | Source directory                                       |
+| `user@remote_host:/remote/dir/` | Destination path on remote system                      |
+
 
 – Certification – RHCSA or LIPIC-1
 
