@@ -59,6 +59,16 @@ Paste copied text after cursor
 scp command 
             rsync -avz -e "ssh -i /path/to/private_key.pem" /local/dir/ user@remote_host:/remote/dir/
 
+            Safe Two-Way Sync with Tools Built on rsync
+To handle conflicts and timestamps safely, you can use wrappers around rsync, such as:
+🧠 Option 1: unison
+Cross-platform (Linux, macOS, Windows)
+Tracks changes on both sides
+Handles conflicts interactively
+Example:
+unison /local ssh://user@remote//remote
+✅ Truly synchronizes both directions safely
+
 – Certification – RHCSA or LIPIC-1
 
 Containers
