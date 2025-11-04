@@ -59,6 +59,19 @@ Paste copied text after cursor
 scp command 
             rsync -avz -e "ssh -i /path/to/private_key.pem" /local/dir/ user@remote_host:/remote/dir/
 
+| Option                | Description                                                            |
+| --------------------- | ---------------------------------------------------------------------- |
+| `-a`                  | Archive mode (preserves permissions, symbolic links, timestamps, etc.) |
+| `-v`                  | Verbose (shows progress)                                               |
+| `-z`                  | Compress data during transfer                                          |
+| `-h`                  | Human-readable numbers (for file sizes, etc.)                          |
+| `--progress`          | Show progress during transfer                                          |
+| `--delete`            | Delete files in destination that don’t exist in source                 |
+| `-e "ssh"`            | Use SSH as the transport mechanism                                     |
+| `--exclude='pattern'` | Exclude files or directories matching the pattern                      |
+| `--dry-run`           | Show what would be done without making changes                         |
+
+
             Safe Two-Way Sync with Tools Built on rsync
 To handle conflicts and timestamps safely, you can use wrappers around rsync, such as:
 🧠 Option 1: unison
