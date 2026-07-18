@@ -1,5 +1,5 @@
-### ssh commands
-# to redirect remote machine's locahost to currenct machine 
+# ssh commands
+#@ to redirect remote machine's locahost to currenct machine 
 ssh -N -L 18789:127.0.0.1:18789 waqarwld@gmail.com@100.71.195.41
 I am going to make Documentation for all pricatals and home labs as much I can + Diagrams
 
