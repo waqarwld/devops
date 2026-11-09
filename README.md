@@ -3,6 +3,18 @@
            ssh -N -L 18789:127.0.0.1:18789 waqarwld@gmail.com@100.71.195.41
 I am going to make Documentation for all pricatals and home labs as much I can + Diagrams
 
+SSH for window Fix File Permissions on the Target PC (Crucial!)
+Windows often sets overly permissive default permissions on .ssh folders, which causes OpenSSH to reject keys for security reasons.
+
+On the target PC, run this in PowerShell to lock down permissions:
+
+$path = "$env:USERPROFILE\.ssh\authorized_keys"
+# Remove inheritance and give full control only to SYSTEM and the owner
+icacls.exe $path /reset
+icacls.exe $path /inheritance:r
+icacls.exe $path /grant:r "$($env:USERNAME):(R)"
+icacls.exe $path /grant:r "NT AUTHORITY\SYSTEM:(F)"
+
 linux arch + certificaion in linux
 
 Boot process
